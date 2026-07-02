@@ -424,7 +424,7 @@ Use simulated learner feedback and expert feedback to improve the course:
 
 Use this as the final step, after the course outline (and optionally module-level content) has been confirmed.
 
-Produce a single, self-contained prompt block that the user can copy and paste directly into any external AI slide-generation tool (Gamma, Napkin AI, ChatGPT, Canva Magic Design, or similar). Do not assume a specific tool — the format must be generic and self-contained, with everything the receiving tool needs already included.
+Produce a single, self-contained prompt block that the user can copy and paste directly into any external AI slide-generation tool (Gamma, Napkin AI, ChatGPT, Canva Magic Design, or similar). Do not assume a specific tool — the format must be generic and self-contained, with everything the receiving tool needs already included. The prompt block must also include this visual style guide so the receiving AI slide tool applies consistent branding.
 
 The prompt block must include:
 
@@ -434,10 +434,55 @@ The prompt block must include:
 - Overall tone/style guidance
 - One explicit instruction sentence telling the receiving AI tool what to do (e.g., 「請根據以下大綱生成簡報，每個 slide 對應一頁」)
 
+### Visual style guide
+
+This is a fixed, pre-approved visual style derived from an analysis of a reference Keynote deck (我獨自創業-Beta 財務使用說明書). Include it verbatim in the prompt block — do not alter the colors, font names, or icon library names.
+
+**Brand colors**
+
+| Role | Hex |
+|---|---|
+| Primary (deep indigo blue) | `#3D5A80` |
+| Secondary (teal blue) | `#2B7A96` |
+| Card background (light blue) | `#EAF2F8` |
+| Text on dark background | `#FFFFFF` |
+| Text on light background | `#1B2A41` |
+
+**Typography**
+
+- Chinese headings/body: Noto Sans TC (fallback: PingFang TC), sans-serif
+- English/numerals: Inter
+- Heading weight: Bold (700) or Semibold (600)
+- Body line height: 1.6x or more — optimize for a "quotable, memorable" feel, not information density
+
+**Icon rules**
+
+- Use line-style SVG icons only. **Emoji icons are prohibited.**
+- Reference icon libraries: Heroicons, Lucide, Feather Icons (line-style, open-source, functional, not decorative)
+- Icon color must match the primary `#3D5A80` or secondary `#2B7A96` color — do not use multi-color icons
+
+**Flowchart rules**
+
+- Nodes: rounded rectangles or circular color blocks
+- Connectors: horizontal arrows chaining nodes together
+- Use for: methodology steps, stage transitions, multi-step process content
+
+**Three layout types (apply based on content type)**
+
+1. **Centered minimal** — large centered title + circular speaker photo in the bottom-right corner; use for chapter intros / opening hooks
+2. **Card-based** — multiple columns side by side for comparison; use for list-type or contrast-type content (e.g., three parallel scenarios, a four-quadrant framework)
+3. **Flow-based** — nodes connected by arrows; use for step-type content (e.g., a three-step process)
+
 Output format:
 
 ```text
 [請將以下內容貼到你要使用的 AI 簡報工具]
+
+視覺風格：
+- 主色 #3D5A80、輔色 #2B7A96、卡片底色 #EAF2F8
+- 中文用思源黑體、英文用 Inter，標題粗體置中
+- 一律用線條風格 SVG icon（Heroicons/Lucide 風格），不要用 emoji
+- 步驟型內容用「節點+箭頭」流程圖呈現
 
 課程名稱：...
 目標受眾：...
