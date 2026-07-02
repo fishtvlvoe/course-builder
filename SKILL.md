@@ -472,11 +472,66 @@ This is **not a global default and must not be auto-applied to other users or ot
 - Connectors: horizontal arrows chaining nodes together
 - Use for: methodology steps, stage transitions, multi-step process content
 
+**Common diagram vocabulary**
+
+This vocabulary is generic and **not tied to any specific brand or user** — no reuse warning needed. These shapes can be built with Keynote's built-in diagram/shape tools, or any line-style diagramming tool; nothing here depends on a specific piece of software.
+
+| Diagram type | Good for expressing |
+|---|---|
+| Arrow sequence（箭頭序列） | Steps that build on each other in order |
+| Timeline（時間軸） | Events or milestones laid out across time |
+| Downward list（向下清單） | A ranked or sequential list read top to bottom |
+| Cycle arrows（循環箭頭） | A repeating 3-step loop or feedback cycle |
+| Process blocks（流程方塊） | A branching or multi-stage workflow |
+| Checklist（打勾清單） | Items to verify or complete |
+| Tree diagram（樹狀圖） | Hierarchical breakdown of a category or structure |
+| Pyramid（金字塔） | Levels or priority order, from foundation to peak |
+| Venn diagram（韋恩圖） | Overlap / shared traits between two or three concepts |
+| Honeycomb（蜂巢圖） | A cluster of related, equal-weight items |
+| Puzzle pieces（拼圖） | Parts that combine into one complete whole |
+| Radial mind map（放射狀心智圖） | One core idea branching into multiple sub-topics |
+| Radial connection map（放射狀連接圖） | Multiple nodes all relating back to a shared center |
+| Coordinate axes（座標軸） | Two-dimensional comparison (e.g. impact vs. effort) |
+| Concentric circles（同心圓） | Layers moving from core to periphery, or scope from narrow to broad |
+
+Pick the diagram type that matches the underlying logic of the content, not just visual variety.
+
 **Three layout types (apply based on content type)**
 
 1. **Centered minimal** — large centered title + circular speaker photo in the bottom-right corner; use for chapter intros / opening hooks
 2. **Card-based** — multiple columns side by side for comparison; use for list-type or contrast-type content (e.g., three parallel scenarios, a four-quadrant framework)
 3. **Flow-based** — nodes connected by arrows; use for step-type content (e.g., a three-step process)
+
+### Example 2: "藍動畫版_教學型簡報" — 促銷頁對比配色變化
+
+This is also **not a global default**, and follows the same rule as Example 1 above: only reuse verbatim if the user explicitly asks to reuse this exact style for a new course. It is derived from another reference Keynote deck Fish frequently reuses (藍動畫版_教學型簡報).
+
+**Relationship to Example 1**
+
+The teaching-content primary color system in this deck falls in the same deep-blue family as Example 1 (roughly `#3D5A80`–`#5D7A9C`), so it can be treated as an extension of the same "教學正文" color system rather than a separate brand.
+
+**Accent palette for promo / CTA pages**
+
+In addition to the teaching-page blue system, this deck carries a second, high-contrast palette reserved for pages that need to grab attention — offers, giveaways, calls-to-action:
+
+| Role | Hex |
+|---|---|
+| Promo background (black) | `#1A1A1A` |
+| Promo accent (bright yellow) | `#F5DC4B` |
+
+Use this pairing only for promo/CTA-type slides, not for regular teaching content — mixing it into teaching pages breaks the deck's visual hierarchy.
+
+**Typography and icon rules**
+
+Same as Example 1: consistently sans-serif, matching the cover's weight. Almost no realistic icons or emoji — meaning is carried mostly by geometric line symbols (arrows, circles, triangles, hexagons, dashed circles).
+
+**Layout patterns**
+
+- Highly modular: centered symmetric blue-framed layouts, dashed-border cards, circular numbered progress indicators chained by arrows, quadrant/Venn-style content splits
+- Promo pages: a 3×3 icon grid layout + a tagline banner across the bottom
+- **Cover layout variant**: full-body portrait photo on the left + a white background with a thin blue-gray bordered text block on the right (title / subtitle / speaker / date) — can be treated as a variation of the "Centered minimal" layout type above, for decks that lead with a speaker photo instead of a large centered title
+
+As with Example 1, this is one of Fish's personal frequently-reused examples — not a forced default for other users or courses.
 
 Output format:
 
