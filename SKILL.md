@@ -422,9 +422,14 @@ Use simulated learner feedback and expert feedback to improve the course:
 
 ## Workflow H — Slide generation prompt
 
+**MANDATORY — ask about visual style before drafting any content.** Before producing any slide generation prompt content, ask the user exactly one question (following the single-question-per-turn rule in Core principles): 「這個課程有指定的品牌視覺風格嗎（品牌色、字體、Icon 風格）？或者有沒有可以參考的簡報／品牌網站／設計稿？」
+
+- **If the user provides reference material** (screenshots, a Keynote/PPT file, a website link, a brand guide, etc.) → analyze it and derive concrete colors, fonts, icon style, and layout logic from it. Produce a visual style spec **specific to this user and this course**, and place it at the top of this session's `slide_generation_prompt.md`.
+- **If the user has no preference and doesn't want to decide** → offer a **generic, neutral default**. Never default to any specific person's brand colors. Describe it as principles rather than fixed hex codes — e.g., "pick one primary color + one accent color as a two-color system, use a sans-serif font, use line-style SVG icons, avoid emoji, keep visuals minimal." Tell the user explicitly that this is a generic default, not a style tailored to them.
+
 Use this as the final step, after the course outline (and optionally module-level content) has been confirmed.
 
-Produce a single, self-contained prompt block that the user can copy and paste directly into any external AI slide-generation tool (Gamma, Napkin AI, ChatGPT, Canva Magic Design, or similar). Do not assume a specific tool — the format must be generic and self-contained, with everything the receiving tool needs already included. The prompt block must also include this visual style guide so the receiving AI slide tool applies consistent branding.
+Produce a single, self-contained prompt block that the user can copy and paste directly into any external AI slide-generation tool (Gamma, Napkin AI, ChatGPT, Canva Magic Design, or similar). Do not assume a specific tool — the format must be generic and self-contained, with everything the receiving tool needs already included. The prompt block must include the visual style spec produced from the question above, so the receiving AI slide tool applies consistent, session-specific styling.
 
 The prompt block must include:
 
@@ -434,9 +439,9 @@ The prompt block must include:
 - Overall tone/style guidance
 - One explicit instruction sentence telling the receiving AI tool what to do (e.g., 「請根據以下大綱生成簡報，每個 slide 對應一頁」)
 
-### Visual style guide
+### Example: a previously derived visual style
 
-This is a fixed, pre-approved visual style derived from an analysis of a reference Keynote deck (我獨自創業-Beta 財務使用說明書). Include it verbatim in the prompt block — do not alter the colors, font names, or icon library names.
+This is **not a global default and must not be auto-applied to other users or other courses.** It is one example output, produced by analyzing a specific reference Keynote deck (我獨自創業-Beta 財務使用說明書) for one course. Only reuse this exact spec verbatim if the user explicitly asks to reuse the same visual style (「沿用同一套視覺風格」) for a new course.
 
 **Brand colors**
 
@@ -479,10 +484,7 @@ Output format:
 [請將以下內容貼到你要使用的 AI 簡報工具]
 
 視覺風格：
-- 主色 #3D5A80、輔色 #2B7A96、卡片底色 #EAF2F8
-- 中文用思源黑體、英文用 Inter，標題粗體置中
-- 一律用線條風格 SVG icon（Heroicons/Lucide 風格），不要用 emoji
-- 步驟型內容用「節點+箭頭」流程圖呈現
+[依訪談結果或參考素材產出的視覺風格規範]
 
 課程名稱：...
 目標受眾：...
